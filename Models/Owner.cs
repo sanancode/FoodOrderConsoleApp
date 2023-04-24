@@ -11,8 +11,8 @@ namespace FoodOrderConsoleApp
     {
         public string RestaurantName { get; set; }
         public double Rating { get; set; }
-        public List<MealMenu> MealMenu { get; set; }
         public string AddressName { get; set; }
+        public List<MealMenu> MealMenu { get; set; }
 
         public Owner(string fullname, string type, string restaurantname, string addressname, string login, string password) : base(fullname, type, login, password)
         {

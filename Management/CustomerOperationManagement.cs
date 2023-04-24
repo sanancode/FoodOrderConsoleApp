@@ -126,7 +126,6 @@ namespace FoodOrderConsoleApp.Management
                 int sortindex = CommonMethods.getInteger("\nPlease select the meal above: ");
                 string mealname = sortmenuArray[sortindex - 1]; //mehsulun adi
 
-
                 //yekun olaraq elde dilen datalara uygun gelen qiymet tapilir
                 for (int i = 0; i < Storage.profiles.Count; i++) //profiller uzre axtaris
                 {
@@ -153,6 +152,11 @@ namespace FoodOrderConsoleApp.Management
                 }
             exit:;
 
+                //delivery fee
+                float deliveryfee = Storage.addresses[restaurantindex - 1].Fee;
+                totalPrice += deliveryfee;
+
+                //Final
                 Console.WriteLine($"\nTotal price: {totalPrice}");
 
                 answer = CommonMethods.getString("\nAnother order? (Y/N): ");
